@@ -1,0 +1,221 @@
+/*CSS DOCUMENT*/
+@charset "UTF-8";
+
+/*configuraciones generales*/
+@font-face {
+    font-family:"Inter Regular";
+    src: url(fuentes/Inter-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url(fuentes/Inter-Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Thin";
+    src: url(fuentes/Inter-Thin.ttf) format(truetype);
+    font-weight: normal;
+    font-style: thin;
+}
+
+@font-face {
+    font-family: "Inter Medium";
+    src: url(fuentes/Inter-Medium.ttf) format(truetype);
+    font-weight: normal;
+    font-style: medium;
+}
+
+nav a {
+    margin: 05px;
+    margin-bottom: 10px;
+}
+
+body {
+        background-image: url("img/fondo-artistico.jpg");
+        background-size: 5000px;
+        background-repeat: repeat;
+}
+
+header {
+    text-align:center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+nav a {
+    color: #5e2330;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #9e2f37;
+    text-decoration: underline;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.sobre-estudiante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    display: inline-flex;
+    margin-bottom: 25px;
+    align-items: center;
+    gap: 10px;
+    background-color: #982f38;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #7d222b;
+    transform: translateY(-2px);
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.fotos img {
+    width: 220px;
+    height: 340px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fotos img:hover {
+    transform: scale(1.08);
+}
+
+.frase {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+* {
+    font-family: "Jost", sans-serif;
+}
+
+/*aca empiezan las aplicaciones*/
+
+h1 { 
+     text-align: center;
+     font-size: 64px;
+     color: rgb(152, 40, 46);
+     margin-top: 50px;
+     margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    color: #b2767c;
+    margin: 0;
+}
+
+.decoracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0 30px;
+}
+
+.linea {
+    width: 120px;
+    height: 1px;
+    background-color: #a33a42;
+}
+
+.estrella {
+    color: #a33a42;
+    font-size: 18px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #8f2d35;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.texto-sobre-mi {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+.catedra {
+    background-color: #8f202b;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.catedra img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.redes {
+    margin-bottom: 30px;
+}
+
+.redes a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #8f202b;
+}
+
+.copyright {
+    background-color: #8f202b;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
