@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Magalí Giménez</title>
+
+  <!-- Google Fonts: Amarante (para PORTFOLIO) y Afacad (para subtítulos y textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600&family=Amarante&display=swap" rel="stylesheet">
+
+  <!-- AQUI ES DONDE DEBO AGREGAR ESTA LÍNEA -->
+  <link rel="stylesheet" href="estilos.css">
+
+  <style>
+    :root {
+      --color-burgundy: #611827;
+      --color-cream: #F5EFEB;
+      --color-grid-line: #E2D7CE;
+      --color-purple-logo: #B7A8CE;
+      --font-serif: 'Amarante', serif;
+      --font-sans: 'Afacad', sans-serif;
+    }
+
+    * { 
+      margin: 0;
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+
+    body { 
+      font-family: var(--font-sans); 
+      color: var(--color-burgundy); 
+      background-color: var(--color-cream);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a { 
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+    /* HEADER */
+    header {
+      background-color: var(--color-burgundy);
+      padding: 16px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    /* Logo circular con la "m" */
+    .logo-circle {
+      width: 44px;
+      height: 44px;
+      background-color: var(--color-purple-logo);
+      color: var(--color-burgundy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .nav-links { 
+      display: flex; 
+      gap: 35px; 
+      list-style: none; 
+    }
+
+    .nav-links a {
+      color: white; 
+      font-size: 0.85rem; 
+      letter-spacing: 1.5px;
+      text-transform: uppercase; 
+      font-weight: 400; 
+      transition: opacity 0.3s;
+    }
+
+    .nav-links a:hover { 
+      opacity: 0.7; 
+    }
+
+    /* SECCIÓN PRINCIPAL / HERO */
+    .hero-section {
+      flex: 1;
+      background-color: var(--color-cream);
+      background-image: 
+        linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+      background-size: 30px 30px;
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center;
+      text-align: center; 
+      padding: 60px 20px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.25rem; 
+      letter-spacing: 3px; 
+      text-transform: uppercase; 
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif); 
+      font-size: 6.5rem; 
+      font-weight: 400;
+      color: var(--color-burgundy); 
+      letter-spacing: 6px; 
+      margin-bottom: 20px; 
+      line-height: 1;
+    }
+
+    .hero-tag {
+      border: 1.5px solid var(--color-burgundy); 
+      padding: 6px 28px; 
+      border-radius: 10px;
+      font-size: 0.95rem; 
+      color: var(--color-burgundy); 
+      font-weight: 500;
+      background-color: rgba(245, 239, 235, 0.85);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--color-burgundy);
+      color: white;
+      padding: 16px 5%;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .footer-info {
+      display: flex;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .footer-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-label {
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .footer-value {
+      font-size: 0.8rem;
+      opacity: 0.85;
+      font-weight: 400;
+    }
+
+    .footer-block.align-right {
+      text-align: right;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header nav, .footer-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+      }
+
+      .footer-info {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .footer-block.align-right {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo-link">
+        <img src="img/marca.png" alt="Logo Portfolio" class="logo-img"><!-- Puedes usar tu tag <img> o esta clase div si usas el logo generado -->
+      </a>
+      <ul class="nav-links">
+        <!-- Te lleva a la nueva subpágina que arme -->
+        <li><a href="quien-soy.html">¿QUIÉN SOY?</a></li>
+
+        <!-- Próximas páginas o secciones -->
+        <li><a href="contactame.html">CONTÁCTAME</a></li>
+        <li><a href="#descarga-cv">DESCARGA MI CV</a></li>
+        <li><a href="#experiencias.html">EXPERIENCIAS</a></li>
+        <li><a href="#proyectos.html">PROYECTOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Cuadrícula) -->
+  <section class="hero-section">
+    <p class="hero-subtitle">Diseño y Comunicación Visual</p>
+    <h1 class="hero-title">PORTFOLIO</h1>
+    <div class="hero-tag">Gimenez Magali 2026</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      
+      <div class="footer-info">
+        <div class="footer-block">
+          <span class="footer-label">CONTACTO</span>
+          <a href="mailto:magali.gimenez@outlook.com.ar" class="footer-value">magali.gimenez@outlook.com.ar</a>
+        </div>
+
+        <div class="footer-block">
+          <span class="footer-label">TELÉFONO</span>
+          <span class="footer-value">2923-327402</span>
+        </div>
+
+        <div class="footer-block align-right">
+          <span class="footer-label">2026 Magalí Gimenez</span>
+          <span class="footer-value">Todos los derechos reservados</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
