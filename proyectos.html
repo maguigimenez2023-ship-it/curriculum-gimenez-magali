@@ -3,99 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos - Magalí Giménez</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Proyectos- Magalí Giménez</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600&family=Amarante&display=swap" rel="stylesheet">
+
+<!-- AQUI ES DONDE DEBO AGREGAR ESTA LÍNEA -->
+  <link rel="stylesheet" href="estilos.css">
+  
 </head>
 <body>
 
-  <!-- HEADER / NAVEGACIÓN -->
-  <header class="navbar">
-    <div class="logo">m</div>
+  <!-- Header -->
+  <header>
     <nav>
-      <ul>
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="index.html#quien-soy">¿QUIÉN SOY?</a></li>
-        <li><a href="contacto.html">CONTACTAME</a></li>
-        <li><a href="cv.pdf" target="_blank" download>DESCARGA MI CV</a></li>
-        <li><a href="proyectos.html" class="active">PROYECTOS</a></li>
+        <!-- Al hacer clic en el logo (m), te devuelve al index.html -->
+      <a href="index.html" class="logo-link">
+        <img src="img/marca.png" alt="Logo Portfolio" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <!-- Se mantiene activo en esta página -->
+        <li><a href="quien-soy.html" class="active">¿Quién soy?</a></li>
+
+        <!-- Te redirigen al inicio y bajan a la sección respectiva -->
+        <li><a href="contactame.html">CONTÁCTAME</a></li>
+        <li><a href="descarga-cv.html">DESCARGA MI CV</a></li>
+        <li><a href="experiencias.html">EXPERIENCIAS</a></li>
+        <li><a href="proyectos.html">PROYECTOS</a></li>
       </ul>
     </nav>
   </header>
+  
+  <!-- ================= SECCIÓN PRINCIPAL DE PROYECTOS ================= -->
+  <main class="projects-container">
 
-  <!-- SECCIÓN PRINCIPAL DE PROYECTOS -->
-  <main class="projects-section">
-    <h2>MIS TRABAJOS DESTACADOS...</h2>
-    <p class="section-desc">Una selección de mis proyectos más recientes sobre diseño, identidad visual y representación espacial.</p>
+    <!-- SECCIÓN 1: DISEÑO -->
+    <section class="projects-section">
+      <h2 class="section-title">MIS TRABAJOS DESTACADOS COMO DISEÑADORA:</h2>
+      <p class="section-subtitle">Una selección de proyectos de identidad visual, branding, y diseño de packaging.</p>
 
-    <!-- TARJETAS SUPERIORES -->
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-img" style="background-image: url('proyecto1.jpg');"></div>
-        <h3>Taller de Diseño II</h3>
-        <a href="#" class="btn-ver">Ver más</a>
+      <div class="cards-grid">
+        
+        <!-- Tarjeta 1 -->
+        <article class="project-card">
+          <div class="card-img-wrapper">
+            <img src="img/vino frontal acostado.jpg" alt="Etiqueta de vino Look at Me">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Taller de Diseño III</span>
+            <h3 class="card-title">Etiqueta de vino - Look at Me</h3>
+            <a href="#" class="btn-ver-mas">ver más</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="project-card">
+          <div class="card-img-wrapper">
+            <img src="img/jueguete pony.jpg" alt="Escultura de madera">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Diseño en el Espacio</span>
+            <h3 class="card-title">Escultura de madera</h3>
+            <a href="#" class="btn-ver-mas">ver más</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="project-card">
+          <div class="card-img-wrapper">
+            <video src="img/catalogo de ositos.mp4" autoplay muted loop playsinline class="card-video"></video>          </div>
+          <div class="card-content">
+            <span class="card-tag">Fanzine</span>
+            <h3 class="card-title">Tarjeta de presentación y QR</h3>
+            <a href="#" class="btn-ver-mas">ver más</a>
+          </div>
+        </article>
+
       </div>
+    </section>
 
-      <div class="card">
-        <div class="card-img" style="background-image: url('proyecto2.jpg');"></div>
-        <h3>Diseño en el Espacio</h3>
-        <a href="#" class="btn-ver">Ver más</a>
-      </div>
-
-      <div class="card">
-        <div class="card-img" style="background-image: url('proyecto3.jpg');"></div>
-        <h3>Medios Expresivos II</h3>
-        <a href="#" class="btn-ver">Ver más</a>
-      </div>
+    <!-- BANNER INTERMEDIO -->
+    <div class="divider-banner">
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
+      <span>PROYECTOS</span>
     </div>
 
-    <!-- CINTA / MARQUEE DECORATIVO -->
-    <div class="ticker-bar">
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-    </div>
+    <!-- SECCIÓN 2: FOTOGRAFÍA -->
+    <section class="projects-section">
+      <h2 class="section-title">MIS TRABAJOS DESTACADOS COMO FOTÓGRAFA:</h2>
+      <p class="section-subtitle">Capturando momentos especiales y contando historias a través de las sesiones fotográficas.</p>
 
-    <!-- METODOLOGÍA / PASOS -->
-    <div class="process-grid">
-      <div class="process-step">
-        <h4>Investigación y Concepto:</h4>
-        <p>Analizo las necesidades del proyecto para definir una idea sólida.</p>
+      <div class="cards-grid">
+        
+        <!-- Tarjeta 4 -->
+        <article class="project-card">
+          <div class="card-img-wrapper">
+            <img src="img/img_bebita.JPG" alt="Sesiones Newborn">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Sesiones Newborn</span>
+            <h3 class="card-title">Bebés recién nacidos</h3>
+            <a href="#" class="btn-ver-mas">ver más</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 5 -->
+        <article class="project-card">
+          <div class="card-img-wrapper">
+            <img src="img/navideña niña.JPG" alt="Sesiones Navideñas">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Sesiones Navideñas</span>
+            <h3 class="card-title">Navidad Mágica - Fotografía Familiar</h3>
+            <a href="#" class="btn-ver-mas">ver más</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 6 -->
+        <article class="project-card">
+          <div class="card-img-wrapper">
+            <img src="img/perra cachorra.JPG" alt="Sesiones Perros">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Sesiones Perros</span>
+            <h3 class="card-title">Cachorros - Mi mejor amigo</h3>
+            <a href="#" class="btn-ver-mas">ver más</a>
+          </div>
+        </article>
+
       </div>
+    </section>
 
-      <div class="process-step">
-        <h4>Bocetado y Diseño:</h4>
-        <p>Doy forma a las ideas utilizando herramientas digitales y técnicas experimentales.</p>
-      </div>
-
-      <div class="process-step">
-        <h4>Producción y Entrega:</h4>
-        <p>Pulo cada detalle tipográfico y visual para lograr el resultado final.</p>
-      </div>
-    </div>
-
-    <!-- PROYECTO INFERIOR DESTACADO (CAMARA EOS) -->
-    <div class="featured-project-card">
-      <div class="featured-img" style="background-image: url('camara-eos.jpg');"></div>
-      <a href="#" class="btn-ver">Ver más</a>
-    </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-logo">m</div>
-    <div class="footer-info">
-      <span>Contacto: <a href="mailto:magali.gimenez@email.com">magali.gimenez@email.com</a></span>
-      <span>Teléfono: 1234-5678</span>
-    </div>
-    <div class="footer-copy">
-      © 2026 Magalí Giménez
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <div class="footer-block">
+          <span class="footer-label">Contacto</span>
+          <a href="mailto:magali.gimenez@outlook.com.ar" class="footer-value">magali.gimenez@outlook.com.ar</a>
+        </div>
+
+        <div class="footer-block">
+          <span class="footer-label">Teléfono</span>
+          <span class="footer-value">2923-327402</span>
+        </div>
+
+        <div class="footer-block align-right">
+          <span class="footer-label">2026 Magalí Gimenez</span>
+          <span class="footer-value">Todos los derechos reservados</span>
+        </div>
+      </div>
     </div>
   </footer>
 

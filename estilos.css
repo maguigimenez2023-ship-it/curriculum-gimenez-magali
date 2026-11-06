@@ -31,7 +31,7 @@ a {
 /* ================= HEADER ================= */
 header {
   background-color: var(--color-burgundy);
-  padding: 12px 5%;
+  padding: 15px 5%;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,7 +43,7 @@ header nav {
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
-  width: 160%;
+  width: 100%;
 }
 
 /* Estilos para imagen de logo */
@@ -60,7 +60,7 @@ header nav {
 
 .nav-links { 
   display: flex; 
-  gap: 35px; 
+  gap: 30px; 
   list-style: none; 
 }
 
@@ -196,19 +196,48 @@ footer {
   }
 }
 
+/* ================= HEADER Y NAVEGACIÓN UNIFICADOS ================= */
+header {
+  background-color: var(--color-burgundy);
+  width: 100%;
+  padding: 15px 5%; /* Usa el mismo padding lateral que el resto de tu web */
+  box-sizing: border-box;
+}
+
+header nav {
+  max-width: 1280px; /* Mismo ancho máximo que tus contenedores de contenido */
+  width: 100%;
+  margin: 0 auto;    /* Centra perfectamente el nav en el eje */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
 /* ================= SECCIÓN QUIÉN SOY (DOS COLUMNAS) ================= */
 .about-section {
   flex: 1;
   background-color: #FDF6E2; /* Un tono amarillo pastel suave y cálido (puedes ajustarlo si prefieres otro tono) */
   background-image: none;    /* Quitamos por completo las líneas de la cuadrícula */
-  padding: 60px 5%;
+  padding: 60px 3%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about-container {
-  max-width: 1100px;
+  max-width: 1500px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -231,16 +260,18 @@ footer {
 
 .about-heading {
   font-family: var(--font-serif);
-  font-size: 2.3rem;
+  font-size: 2.6rem; /* <--- Antes estaba en 2.3rem, súbelo a lo que te guste */
   font-weight: 400;
   color: var(--color-burgundy);
   margin-bottom: 6px;
   line-height: 1.1;
 }
 
-.about-paragraph {
-  font-size: 1rem;
-  line-height: 1.6;
+/* ================= TAMAÑOS DE TEXTO UNIFICADOS ================= */
+.about-paragraph, 
+.skills-list li {
+  font-size: 1.3rem !important; /* <--- El tamaño grande que elegiste para ambos */
+  line-height: 1.6 !important;
   color: var(--color-burgundy);
   font-weight: 400;
 }
@@ -250,8 +281,7 @@ footer {
   padding-left: 18px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  font-size: 0.95rem;
+  gap: 6px;
 }
 
 .about-subheading {
@@ -263,18 +293,18 @@ footer {
 
 /* Imagen de Software */
 .software-image-container {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .software-img {
-  max-width: 220px; /* Ajusta este valor si quieres que la imagen de software sea más grande o chica */
+  max-width: 300px; /* Ajusta este valor si quieres que la imagen de software sea más grande o chica */
   height: auto;
   object-fit: contain;
 }
 
 /* Columna Derecha: Ilustración del personaje */
 .about-image-content {
-  flex: 1;
+  flex: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,6 +317,7 @@ footer {
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0px 10px 15px rgba(97, 24, 39, 0.1));
+  transform: translateX(30px);
 }
 
 /* ================= FOOTER ================= */
@@ -369,3 +400,216 @@ footer {
     text-align: center;
   }
 }
+
+/* ================= VARIABLES Y CONFIGURACIÓN GENERAL ================= */
+:root {
+  --color-burgundy: #611827;      /* Bordó principal */
+  --color-bg-cream: #FDF6E2;      /* Fondo crema / Amarillo pastel */
+  --color-card-blue: #B5C9E5;     /* Azul/celeste suave para las tarjetas */
+  --color-banner-green: #DDE2C6;  /* Verde/beige del separador */
+  --font-title: 'Amarante', serif;
+  --font-body: 'Afacad', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-cream);
+  font-family: var(--font-body);
+  color: var(--color-burgundy);
+}
+
+/* ================= HEADER Y NAVEGACIÓN UNIFICADOS ================= */
+header {
+  background-color: var(--color-burgundy);
+  width: 100%;
+  padding: 15px 5%;
+  box-sizing: border-box;
+}
+
+header nav {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* ================= CONTENEDOR PRINCIPAL DE PROYECTOS ================= */
+.projects-container {
+  max-width: 1500px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.projects-section {
+  margin-bottom: 50px;
+}
+
+/* Títulos y Subtítulos de Sección */
+.section-title {
+  font-family: var(--font-title);
+  color: var(--color-burgundy);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  color: var(--color-burgundy);
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Grilla de 3 Columnas */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ================= TARJETAS DE PROYECTO ================= */
+.project-card {
+  background-color: var(--color-card-blue);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Imagen dentro de la tarjeta */
+.card-img-wrapper {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Textos de la tarjeta */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+/* Estilo para el video de la tarjeta (ordenado junto a las imágenes) */
+.card-img-wrapper video.card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.card-tag {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--color-burgundy);
+}
+
+.card-title {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-burgundy);
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+/* Botón ver más */
+.btn-ver-mas {
+  align-self: center;
+  background-color: var(--color-burgundy);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 8px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover: Cambia a Amarillo Pastel y texto Bordó */
+.btn-ver-mas:hover {
+  background-color: var(--color-bg-cream);
+  color: var(--color-burgundy);
+  transform: translateY(-2px);
+}
+
+/* ================= BANNER INTERMEDIO ================= */
+.divider-banner {
+  background-color: var(--color-banner-green);
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+  overflow: hidden;
+}
+
+.divider-banner span {
+  font-family: var(--font-title);
+  color: var(--color-burgundy);
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--color-burgundy);
+  color: #ffffff;
+  padding: 20px 5%;
+  margin-top: 40px;
+}
+
