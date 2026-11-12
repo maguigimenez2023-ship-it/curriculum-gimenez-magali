@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600&family=Amarante&display=swap" rel="stylesheet">
 
 <!-- AQUI ES DONDE DEBO AGREGAR ESTA LÍNEA -->
+  <link rel="icon" type="image/png" href="img/marca.png">
   <link rel="stylesheet" href="estilos.css">
   
 </head>
@@ -84,16 +85,36 @@
       </div>
     </section>
 
-    <!-- BANNER INTERMEDIO -->
-    <div class="divider-banner">
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
-      <span>PROYECTOS</span>
+<!-- BANNER INTERMEDIO DE PROYECTOS (SCROLL INFINITO) -->
+    <div class="marquee-banner">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- Bloque principal -->
+        <div class="marquee-content">
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+        </div>
+        <!-- Bloque gemelo para continuidad -->
+        <div class="marquee-content" aria-hidden="true">
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+          <span>PROYECTOS</span>
+          <span>•</span>
+        </div>
+      </div>
     </div>
 
     <!-- SECCIÓN 2: FOTOGRAFÍA -->

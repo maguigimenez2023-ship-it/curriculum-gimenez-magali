@@ -613,3 +613,186 @@ footer {
   margin-top: 40px;
 }
 
+/* ================= SECCIÓN DE CONTACTO ================= */
+
+.contact-container {
+  max-width: 1500px;
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas simétricas */
+  gap: 50px;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+/* 1. Título principal */
+.contact-title {
+  font-family: var(--font-title);
+  color: var(--color-burgundy);
+  font-size: 2.2rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: normal; /* Variante Regular */
+  margin-bottom: 25px; /* Espacio amplio entre el título y la bajada */
+}
+
+/* 2. Bajada descriptiva */
+.contact-subtitle {
+  font-family: var(--font-body);
+  color: var(--color-burgundy);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: normal; /* Variante Regular */
+  margin-bottom: 50px; /* Genera la separación grande hacia "MIS REDES" */
+}
+
+/* 3. Título "MIS REDES" */
+.social-heading {
+  font-family: var(--font-title);
+  color: var(--color-burgundy);
+  font-size: 2.2rem;
+  font-weight: normal; /* Variante Regular */
+  text-transform: uppercase;
+  margin-bottom: 25px; /* Espacio previo a los botones de redes */
+}
+
+/* 4. Botones de redes sociales */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 380px;
+}
+
+.social-btn {
+  background-color: var(--color-card-blue);
+  color: var(--color-burgundy);
+  font-family: var(--font-body);
+  font-weight: normal; /* Variante Regular en lugar de bold */
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Evitamos que el color cambie al pasar el cursor o hacer clic, manteniendo el celeste fijo */
+.social-btn:hover,
+.social-btn:focus,
+.social-btn:active {
+  background-color: #B5C9E5 !important; /* Fuerza a que se quede en celeste */
+  color: var(--color-burgundy) !important;
+  text-decoration: underline !important; /* Mantiene el subrayado activo */
+  transform: none !important; /* Sin efectos de desplazamiento */
+  box-shadow: none !important;
+}
+
+/* Columna Derecha (Caja contenedora con tu imagen cuadriculada) */
+.contact-form-wrapper {
+  background-color: #F7F4EA; /* Color base de respaldo mientras carga la imagen */
+  background-repeat: repeat; /* Repite la trama para cubrir toda la superficie */
+  background-size: auto;
+  background-position: top left;
+  border-radius: 16px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  background-color: #D4D8A9; /* Fondo semitransparente sobre la grilla */
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-family: 'Amarante', serif; /* O var(--font-title) si ya tienes declarada la variable */
+  color: var(--color-burgundy);
+  font-size: 18px;
+  font-weight: normal; /* Variante Regular */
+  line-height: 1.2;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #F5F7EC; /* Tono verdoso/crema claro de los inputs */
+  border: 1px solid #d5dcc6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  color: var(--color-burgundy);
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-burgundy);
+}
+
+.form-hint {
+  font-size: 0.75rem;
+  color: #7a6b6d;
+  font-style: italic;
+}
+
+/* Botón Enviar (Centrado dentro del formulario) */
+.btn-enviar {
+  align-self: center; /* Centra el botón horizontalmente */
+  background-color: var(--color-burgundy);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: normal; /* Variante Regular */
+  padding: 10px 35px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+  font-size: 1rem;
+}
+
+.btn-enviar:hover {
+  background-color: var(--color-bg-cream);
+  color: var(--color-burgundy);
+  border: 1px solid var(--color-burgundy);
+}
+
+/* Footer específico de contacto */
+.contact-footer {
+  background-color: var(--color-burgundy);
+  color: white;
+  padding: 25px 5%;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer-content span {
+  font-weight: bold;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Magalí Giménez</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="logo">m</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="index.html#quien-soy">¿QUIÉN SOY?</a></li>
+        <li><a href="contacto.html" class="active">CONTACTAME</a></li>
+        <li><a href="cv.pdf" target="_blank" download>DESCARGA MI CV</a></li>
+        <li><a href="proyectos.html">PROYECTOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN CONTACTO Y FORMULARIO -->
+  <main class="contact-section">
+    <div class="contact-left">
+      <h2>¿HABLAMOS DE TU PRÓXIMO PROYECTO?</h2>
+      <p>Diseñamos juntos ideas creativas.<br>Escribime y lo hacemos realidad.</p>
+
+      <h3>MIS REDES</h3>
+      <div class="social-buttons">
+        <a href="#" class="btn-social">LinkedIn</a>
+        <a href="#" class="btn-social">Behance</a>
+        <a href="#" class="btn-social">Instagram</a>
+        <a href="#" class="btn-social">Email</a>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="form-card">
+        <h3>...PONETE EN CONTACTO CONMIGO...</h3>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">enviar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">m</div>
+    <div class="footer-info">
+      <span>Contacto: <a href="mailto:magali.gimenez@email.com">magali.gimenez@email.com</a></span>
+      <span>Teléfono: 1234-5678</span>
+    </div>
+    <div class="footer-copy">
+      © 2026 Magalí Giménez
+    </div>
+  </footer>
+
+</body>
+</html>

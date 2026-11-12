@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactame- Magalí Giménez</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600&family=Amarante&display=swap" rel="stylesheet">
+
+<!-- AQUI ES DONDE DEBO AGREGAR ESTA LÍNEA -->
+  <link rel="icon" type="image/png" href="img/marca.png">
+  <link rel="stylesheet" href="estilos.css">
+  
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+        <!-- Al hacer clic en el logo (m), te devuelve al index.html -->
+      <a href="index.html" class="logo-link">
+        <img src="img/marca.png" alt="Logo Portfolio" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <!-- Se mantiene activo en esta página -->
+        <li><a href="quien-soy.html" class="active">¿Quién soy?</a></li>
+
+        <!-- Te redirigen al inicio y bajan a la sección respectiva -->
+        <li><a href="contactame.html">CONTÁCTAME</a></li>
+        <li><a href="descarga-cv.html">DESCARGA MI CV</a></li>
+        <li><a href="experiencias.html">EXPERIENCIAS</a></li>
+        <li><a href="proyectos.html">PROYECTOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= CONTENEDOR PRINCIPAL DE CONTACTO ================= -->
+  <main class="contact-container">
+    
+    <!-- Columna Izquierda: Textos y Redes Sociales -->
+    <section class="contact-info">
+      <h2 class="contact-title">
+        ¿HABLAMOS DE TU <br>
+        PRÓXIMO PROYECTO?
+    </h2>
+      <p class="contact-subtitle">
+        Diseñamos juntos ideas creativas.<br> 
+        Escribime y lo hacemos realidad.
+    </p>
+
+      <div class="social-section">
+        <h3 class="social-heading">MIS REDES</h3>
+        <div class="social-grid">
+          <a href="https://www.linkedin.com/in/magali-gimenez-b2844425b/" target="_blank" class="social-btn">LinkedIn</a>
+          <a href="https://www.behance.net/magaligimenez1" target="_blank" class="social-btn">Behance</a>
+          <a href="https://www.instagram.com/magui.dcv/?hl=es-la" target="_blank" class="social-btn">Instagram</a>
+          <a href="https://www.tiktok.com/@magui.dcv" target="_blank" class="social-btn">Tik-Tok</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Columna Derecha: Formulario con fondo cuadriculado -->
+    <section class="contact-form-wrapper">
+      <form class="contact-form" action="#" method="POST">
+        
+        <div class="form-group">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dni">DNI</label>
+          <input type="text" id="dni" name="dni">
+          <span class="form-hint">*No colocar puntos u otros caracteres (¡_¡)*</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono">
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+<!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <div class="footer-block">
+          <span class="footer-label">Contacto</span>
+          <a href="mailto:magali.gimenez@outlook.com.ar" class="footer-value">magali.gimenez@outlook.com.ar</a>
+        </div>
+
+        <div class="footer-block">
+          <span class="footer-label">Teléfono</span>
+          <span class="footer-value">2923-327402</span>
+        </div>
+
+        <div class="footer-block align-right">
+          <span class="footer-label">2026 Magalí Gimenez</span>
+          <span class="footer-value">Todos los derechos reservados</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
