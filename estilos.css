@@ -260,11 +260,13 @@ header nav {
 
 .about-heading {
   font-family: var(--font-serif);
-  font-size: 2.6rem; /* <--- Antes estaba en 2.3rem, súbelo a lo que te guste */
+  font-size: 2.2rem; /* <--- Antes estaba en 2.3rem, súbelo a lo que te guste */
   font-weight: 400;
   color: var(--color-burgundy);
   margin-bottom: 6px;
   line-height: 1.1;
+  text-decoration: underline;
+
 }
 
 /* ================= TAMAÑOS DE TEXTO UNIFICADOS ================= */
@@ -483,12 +485,14 @@ header nav {
 
 /* Títulos y Subtítulos de Sección */
 .section-title {
-  font-family: var(--font-title);
+  font-family: 'Amarante';
   color: var(--color-burgundy);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   margin-bottom: 6px;
   text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 .section-subtitle {
@@ -588,21 +592,44 @@ header nav {
 }
 
 /* ================= BANNER INTERMEDIO ================= */
-.divider-banner {
-  background-color: var(--color-banner-green);
+/* 1. Contenedor general de la franja */
+.scroll-horizontal-container {
+  width: 100%;
+  overflow: hidden; /* Oculta lo que sale de la pantalla para dar efecto continuo */
+  background-color: #D4D8A9; /* El color de fondo beige de tu diseño */
   padding: 12px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 50px 0;
-  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.divider-banner span {
-  font-family: var(--font-title);
-  color: var(--color-burgundy);
-  font-size: 1.2rem;
-  letter-spacing: 1.5px;
+/* 2. La pista que se mueve de forma infinita */
+.scroll-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollInfinito 25s linear infinite; /* 20s es la velocidad, podés subirla o bajarla */
+}
+
+/* 3. Cada palabra "PROYECTOS" individual */
+.scroll-item {
+  display: inline-block;
+  padding: 0 40px; /* Distancia de separación entre cada palabra */
+  font-family: 'Amarante'; /* O tu tipografía elegida */
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #661521; /* Un tono oscuro tirando a marrón/gris para que combine con el beige */
+  letter-spacing: 2px;
+}
+
+/* 4. Animación clave para el movimiento continuo */
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ================= FOOTER ================= */
@@ -659,6 +686,7 @@ footer {
   font-size: 2.2rem;
   font-weight: normal; /* Variante Regular */
   text-transform: uppercase;
+  text-decoration: underline;
   margin-bottom: 25px; /* Espacio previo a los botones de redes */
 }
 
@@ -686,16 +714,14 @@ footer {
 .social-btn:hover,
 .social-btn:focus,
 .social-btn:active {
-  background-color: #B5C9E5 !important; /* Fuerza a que se quede en celeste */
-  color: var(--color-burgundy) !important;
-  text-decoration: underline !important; /* Mantiene el subrayado activo */
-  transform: none !important; /* Sin efectos de desplazamiento */
-  box-shadow: none !important;
+  background-color: #B5C9E5;
+  color: var(--color-burgundy);
+  text-decoration: underline;
+  transform: none;
+  box-shadow: none;
 }
 
-/* Columna Derecha (Caja contenedora con tu imagen cuadriculada) */
 .contact-form-wrapper {
-  background-color: #F7F4EA; /* Color base de respaldo mientras carga la imagen */
   background-repeat: repeat; /* Repite la trama para cubrir toda la superficie */
   background-size: auto;
   background-position: top left;
@@ -795,4 +821,76 @@ footer {
 .footer-content span {
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+/* ==========================================================
+   ESTILOS PARA LA SECCIÓN EXPERIENCIAS
+   ========================================================== */
+
+.experiencias-container {
+  background-color: #FDF6E2; /* Fondo crema característico */
+  padding: 50px 80px;
+  min-height: calc(100vh - 160px);
+  box-sizing: border-box;
+}
+
+.experiencias-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos y textos principales */
+.experiencias-content .section-title {
+  font-family: 'Amarante', serif;
+  font-weight: normal; /* Variante Regular estricta */
+  font-size: 1.5rem;
+  color: #591C21; /* Tono bordó */
+  margin-bottom: 15px;
+}
+
+.experiencias-content .section-subtitle {
+  font-family: 'Afacad', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #2c2c2c;
+  max-width: 900px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* Grilla de tarjetas (3 columnas) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Estilo individual de cada tarjeta celeste */
+.card {
+  background-color: #B2CBEC99; /* Color celeste corporativo */
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-family: 'Afacad', serif;
+  font-weight: normal; /* Variante Regular */
+  font-size: 20px;
+  color: #661521; /* Texto bordó para contraste */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: 'Afacad', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #661521;
+  margin: 0;
+  line-height: 1.4;
 }
